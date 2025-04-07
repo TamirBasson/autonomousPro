@@ -1,4 +1,0 @@
-Invoking command in '/home/epon/AutoDrive/autonomous_combine/build/mpu9250driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/epon/AutoDrive/autonomous_combine/build/mpu9250driver -- -j8 -l8
-Invoked command in '/home/epon/AutoDrive/autonomous_combine/build/mpu9250driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/epon/AutoDrive/autonomous_combine/build/mpu9250driver -- -j8 -l8
-Invoking command in '/home/epon/AutoDrive/autonomous_combine/build/mpu9250driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/epon/AutoDrive/autonomous_combine/build/mpu9250driver
-Invoked command in '/home/epon/AutoDrive/autonomous_combine/build/mpu9250driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/epon/AutoDrive/autonomous_combine/build/mpu9250driver

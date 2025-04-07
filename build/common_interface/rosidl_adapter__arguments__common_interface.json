@@ -1,7 +1,0 @@
-{
-  "package_name": "common_interface",
-  "non_idl_tuples": [
-    "/home/epon/AutoDrive/autonomous_combine/src/common_interface:msg/KeyCtrl.msg",
-    "/home/epon/AutoDrive/autonomous_combine/src/common_interface:msg/SerComStruct.msg"
-  ]
-}

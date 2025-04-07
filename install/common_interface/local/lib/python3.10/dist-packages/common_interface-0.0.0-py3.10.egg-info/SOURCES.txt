@@ -1,9 +1,0 @@
-setup.py
-common_interface/__init__.py
-common_interface.egg-info/PKG-INFO
-common_interface.egg-info/SOURCES.txt
-common_interface.egg-info/dependency_links.txt
-common_interface.egg-info/top_level.txt
-common_interface/msg/__init__.py
-common_interface/msg/_key_ctrl.py
-common_interface/msg/_ser_com_struct.py
