@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from common_interface/msg/KeyCtrl.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Twist.idl"
+
+module common_interface {
+  module msg {
+    struct KeyCtrl {
+      boolean allow_nav;
+
+      geometry_msgs::msg::Twist manual_spd;
+    };
+  };
+};

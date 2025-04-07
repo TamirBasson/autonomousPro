@@ -1,0 +1,6 @@
+[console_scripts]
+cmd2gpio = control_hardware.cmd2gpio:main
+cmd2pwm = control_hardware.cmd2pwm:main
+joy_control_node = control_hardware.joy_control_node:main
+pwm2GPIO = control_hardware.pwm2GPIO:main
+

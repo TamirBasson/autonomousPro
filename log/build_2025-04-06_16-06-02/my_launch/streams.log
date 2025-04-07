@@ -1,0 +1,21 @@
+[1.375s] Invoking command in '/home/epon/AutoDrive/autonomous_combine/src/my_launch': PYTHONPATH=/home/epon/AutoDrive/autonomous_combine/build/my_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/epon/AutoDrive/autonomous_combine/install/my_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_launch build --build-base /home/epon/AutoDrive/autonomous_combine/build/my_launch/build install --record /home/epon/AutoDrive/autonomous_combine/build/my_launch/install.log --single-version-externally-managed install_data
+[1.589s] running egg_info
+[1.590s] writing ../../build/my_launch/my_launch.egg-info/PKG-INFO
+[1.590s] writing dependency_links to ../../build/my_launch/my_launch.egg-info/dependency_links.txt
+[1.590s] writing entry points to ../../build/my_launch/my_launch.egg-info/entry_points.txt
+[1.591s] writing requirements to ../../build/my_launch/my_launch.egg-info/requires.txt
+[1.591s] writing top-level names to ../../build/my_launch/my_launch.egg-info/top_level.txt
+[1.592s] reading manifest file '../../build/my_launch/my_launch.egg-info/SOURCES.txt'
+[1.593s] writing manifest file '../../build/my_launch/my_launch.egg-info/SOURCES.txt'
+[1.594s] running build
+[1.594s] running build_py
+[1.594s] running install
+[1.595s] running install_lib
+[1.596s] running install_data
+[1.597s] running install_egg_info
+[1.598s] removing '/home/epon/AutoDrive/autonomous_combine/install/my_launch/lib/python3.10/site-packages/my_launch-0.0.0-py3.10.egg-info' (and everything under it)
+[1.598s] Copying ../../build/my_launch/my_launch.egg-info to /home/epon/AutoDrive/autonomous_combine/install/my_launch/lib/python3.10/site-packages/my_launch-0.0.0-py3.10.egg-info
+[1.600s] running install_scripts
+[1.618s] Installing image_subscriber script to /home/epon/AutoDrive/autonomous_combine/install/my_launch/lib/my_launch
+[1.618s] writing list of installed files to '/home/epon/AutoDrive/autonomous_combine/build/my_launch/install.log'
+[1.650s] Invoked command in '/home/epon/AutoDrive/autonomous_combine/src/my_launch' returned '0': PYTHONPATH=/home/epon/AutoDrive/autonomous_combine/build/my_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/epon/AutoDrive/autonomous_combine/install/my_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_launch build --build-base /home/epon/AutoDrive/autonomous_combine/build/my_launch/build install --record /home/epon/AutoDrive/autonomous_combine/build/my_launch/install.log --single-version-externally-managed install_data

@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/control_hardware/control_hardware.egg-info
+writing ../../build/control_hardware/control_hardware.egg-info/PKG-INFO
+writing dependency_links to ../../build/control_hardware/control_hardware.egg-info/dependency_links.txt
+writing entry points to ../../build/control_hardware/control_hardware.egg-info/entry_points.txt
+writing requirements to ../../build/control_hardware/control_hardware.egg-info/requires.txt
+writing top-level names to ../../build/control_hardware/control_hardware.egg-info/top_level.txt
+writing manifest file '../../build/control_hardware/control_hardware.egg-info/SOURCES.txt'
+reading manifest file '../../build/control_hardware/control_hardware.egg-info/SOURCES.txt'
+writing manifest file '../../build/control_hardware/control_hardware.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build
+creating /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib
+creating /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware
+copying control_hardware/pwm2GPIO.py -> /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware
+copying control_hardware/joy_control_node.py -> /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware
+copying control_hardware/__init__.py -> /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware
+copying control_hardware/cmd2pwm.py -> /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware
+copying control_hardware/cmd2GPIO.py -> /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware
+running install
+running install_lib
+creating /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware
+copying /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware/pwm2GPIO.py -> /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware
+copying /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware/joy_control_node.py -> /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware
+copying /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware/__init__.py -> /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware
+copying /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware/cmd2pwm.py -> /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware
+copying /home/epon/AutoDrive/autonomous_combine/build/control_hardware/build/lib/control_hardware/cmd2GPIO.py -> /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware
+byte-compiling /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware/pwm2GPIO.py to pwm2GPIO.cpython-310.pyc
+byte-compiling /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware/joy_control_node.py to joy_control_node.cpython-310.pyc
+byte-compiling /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware/cmd2pwm.py to cmd2pwm.cpython-310.pyc
+byte-compiling /home/epon/AutoDrive/autonomous_combine/install/control_hardware/lib/python3.10/site-packages/control_hardware/cmd2GPIO.py to cmd2GPIO.cpython-310.pyc
+running install_data
+creating /home/epon/AutoDrive/autonomous_combine/install/control_hardware/share/ament_index
+creating /home/epon/AutoDrive/autonomous_combine/install/control_hardware/share/ament_index/resource_index
+creating /home/epon/AutoDrive/autonomous_combine/install/control_hardware/share/ament_index/resource_index/packages

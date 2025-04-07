@@ -1,0 +1,259 @@
+[0.035s] Invoking command in '/home/epon/AutoDrive/autonomous_combine/build/common_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/epon/AutoDrive/autonomous_combine/install/robot_simulation:/home/epon/AutoDrive/autonomous_combine/install/robot_navigation:/home/epon/AutoDrive/autonomous_combine/install/my_launch:/home/epon/AutoDrive/autonomous_combine/install/control_hardware:/opt/ros/humble /usr/bin/cmake /home/epon/AutoDrive/autonomous_combine/src/common_interface -DCMAKE_INSTALL_PREFIX=/home/epon/AutoDrive/autonomous_combine/install/common_interface
+[0.778s] -- The C compiler identification is GNU 11.4.0
+[0.779s] -- The CXX compiler identification is GNU 11.4.0
+[0.779s] -- Detecting C compiler ABI info
+[0.779s] -- Detecting C compiler ABI info - done
+[0.779s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.779s] -- Detecting C compile features
+[0.779s] -- Detecting C compile features - done
+[0.779s] -- Detecting CXX compiler ABI info
+[0.779s] -- Detecting CXX compiler ABI info - done
+[0.780s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.780s] -- Detecting CXX compile features
+[0.780s] -- Detecting CXX compile features - done
+[0.780s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.780s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.780s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.780s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.780s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.780s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.780s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.780s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.985s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.330s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.829s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.866s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.870s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.905s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.906s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.906s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.906s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.942s] -- Found PythonExtra: .so  
+[2.041s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.044s] -- Added test 'lint_cmake' to check CMake code style
+[2.045s] -- Added test 'xmllint' to check XML markup files
+[2.053s] -- Configuring done
+[2.107s] -- Generating done
+[2.127s] -- Build files have been written to: /home/epon/AutoDrive/autonomous_combine/build/common_interface
+[2.142s] Invoked command in '/home/epon/AutoDrive/autonomous_combine/build/common_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/epon/AutoDrive/autonomous_combine/install/robot_simulation:/home/epon/AutoDrive/autonomous_combine/install/robot_navigation:/home/epon/AutoDrive/autonomous_combine/install/my_launch:/home/epon/AutoDrive/autonomous_combine/install/control_hardware:/opt/ros/humble /usr/bin/cmake /home/epon/AutoDrive/autonomous_combine/src/common_interface -DCMAKE_INSTALL_PREFIX=/home/epon/AutoDrive/autonomous_combine/install/common_interface
+[2.145s] Invoking command in '/home/epon/AutoDrive/autonomous_combine/build/common_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/epon/AutoDrive/autonomous_combine/install/robot_simulation:/home/epon/AutoDrive/autonomous_combine/install/robot_navigation:/home/epon/AutoDrive/autonomous_combine/install/my_launch:/home/epon/AutoDrive/autonomous_combine/install/control_hardware:/opt/ros/humble /usr/bin/cmake --build /home/epon/AutoDrive/autonomous_combine/build/common_interface -- -j8 -l8
+[2.182s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.194s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.197s] [  5%] Built target ament_cmake_python_copy_common_interface
+[2.450s] running egg_info
+[2.451s] creating common_interface.egg-info
+[2.454s] writing common_interface.egg-info/PKG-INFO
+[2.455s] writing dependency_links to common_interface.egg-info/dependency_links.txt
+[2.455s] writing top-level names to common_interface.egg-info/top_level.txt
+[2.455s] writing manifest file 'common_interface.egg-info/SOURCES.txt'
+[2.455s] reading manifest file 'common_interface.egg-info/SOURCES.txt'
+[2.455s] writing manifest file 'common_interface.egg-info/SOURCES.txt'
+[2.482s] [  5%] Built target ament_cmake_python_build_common_interface_egg
+[2.511s] [  5%] Built target common_interface__cpp
+[2.519s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.519s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.522s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.588s] [ 15%] [32mBuilding C object CMakeFiles/common_interface__rosidl_generator_c.dir/rosidl_generator_c/common_interface/msg/detail/key_ctrl__functions.c.o[0m
+[2.588s] [ 17%] [32mBuilding C object CMakeFiles/common_interface__rosidl_generator_c.dir/rosidl_generator_c/common_interface/msg/detail/ser_com_struct__functions.c.o[0m
+[2.659s] [ 20%] [32m[1mLinking C shared library libcommon_interface__rosidl_generator_c.so[0m
+[2.714s] [ 20%] Built target common_interface__rosidl_generator_c
+[2.732s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.741s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.745s] [ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.921s] [ 30%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/common_interface/msg/key_ctrl__type_support.cpp.o[0m
+[2.925s] [ 33%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/common_interface/msg/ser_com_struct__type_support.cpp.o[0m
+[3.017s] [ 35%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/common_interface/msg/detail/ser_com_struct__type_support.cpp.o[0m
+[3.019s] [ 38%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/common_interface/msg/detail/key_ctrl__type_support.cpp.o[0m
+[3.039s] [ 41%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/common_interface/msg/detail/dds_fastrtps/key_ctrl__type_support.cpp.o[0m
+[3.199s] [ 43%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/common_interface/msg/key_ctrl__type_support.cpp.o[0m
+[3.224s] [ 46%] [32mBuilding C object CMakeFiles/common_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/common_interface/msg/detail/key_ctrl__type_support.c.o[0m
+[3.242s] [ 48%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/common_interface/msg/ser_com_struct__type_support.cpp.o[0m
+[3.250s] [ 51%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/common_interface/msg/detail/key_ctrl__type_support_c.cpp.o[0m
+[3.291s] [ 53%] [32mBuilding C object CMakeFiles/common_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/common_interface/msg/detail/ser_com_struct__type_support.c.o[0m
+[3.294s] [ 56%] [32m[1mLinking CXX shared library libcommon_interface__rosidl_typesupport_c.so[0m
+[3.339s] [ 58%] [32m[1mLinking C shared library libcommon_interface__rosidl_typesupport_introspection_c.so[0m
+[3.385s] [ 61%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/common_interface/msg/detail/dds_fastrtps/ser_com_struct__type_support.cpp.o[0m
+[3.387s] [ 61%] Built target common_interface__rosidl_typesupport_c
+[3.396s] [ 64%] [32mBuilding CXX object CMakeFiles/common_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/common_interface/msg/detail/ser_com_struct__type_support_c.cpp.o[0m
+[3.403s] [ 64%] Built target common_interface__rosidl_typesupport_introspection_c
+[3.415s] [ 66%] [32m[1mLinking CXX shared library libcommon_interface__rosidl_typesupport_cpp.so[0m
+[3.548s] [ 66%] Built target common_interface__rosidl_typesupport_cpp
+[3.631s] [ 69%] [32m[1mLinking CXX shared library libcommon_interface__rosidl_typesupport_introspection_cpp.so[0m
+[3.724s] [ 69%] Built target common_interface__rosidl_typesupport_introspection_cpp
+[3.823s] [ 71%] [32m[1mLinking CXX shared library libcommon_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.829s] [ 74%] [32m[1mLinking CXX shared library libcommon_interface__rosidl_typesupport_fastrtps_c.so[0m
+[3.895s] [ 74%] Built target common_interface__rosidl_typesupport_fastrtps_cpp
+[3.901s] [ 74%] Built target common_interface__rosidl_typesupport_fastrtps_c
+[3.916s] [ 74%] Built target common_interface
+[3.931s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.278s] [ 76%] Built target common_interface__py
+[4.293s] [ 82%] [32mBuilding C object CMakeFiles/common_interface__rosidl_generator_py.dir/rosidl_generator_py/common_interface/msg/_ser_com_struct_s.c.o[0m
+[4.293s] [ 82%] [32mBuilding C object CMakeFiles/common_interface__rosidl_generator_py.dir/rosidl_generator_py/common_interface/msg/_key_ctrl_s.c.o[0m
+[4.388s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/common_interface/libcommon_interface__rosidl_generator_py.so[0m
+[4.420s] [ 84%] Built target common_interface__rosidl_generator_py
+[4.434s] [ 92%] [32mBuilding C object CMakeFiles/common_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/common_interface/_common_interface_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.434s] [ 92%] [32mBuilding C object CMakeFiles/common_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/common_interface/_common_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[4.434s] [ 92%] [32mBuilding C object CMakeFiles/common_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/common_interface/_common_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.522s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/common_interface/common_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.527s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/common_interface/common_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.528s] [100%] [32m[1mLinking C shared library rosidl_generator_py/common_interface/common_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.560s] [100%] Built target common_interface__rosidl_typesupport_fastrtps_c__pyext
+[4.563s] [100%] Built target common_interface__rosidl_typesupport_introspection_c__pyext
+[4.567s] [100%] Built target common_interface__rosidl_typesupport_c__pyext
+[4.576s] Invoked command in '/home/epon/AutoDrive/autonomous_combine/build/common_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/epon/AutoDrive/autonomous_combine/install/robot_simulation:/home/epon/AutoDrive/autonomous_combine/install/robot_navigation:/home/epon/AutoDrive/autonomous_combine/install/my_launch:/home/epon/AutoDrive/autonomous_combine/install/control_hardware:/opt/ros/humble /usr/bin/cmake --build /home/epon/AutoDrive/autonomous_combine/build/common_interface -- -j8 -l8
+[4.577s] Invoking command in '/home/epon/AutoDrive/autonomous_combine/build/common_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/epon/AutoDrive/autonomous_combine/install/robot_simulation:/home/epon/AutoDrive/autonomous_combine/install/robot_navigation:/home/epon/AutoDrive/autonomous_combine/install/my_launch:/home/epon/AutoDrive/autonomous_combine/install/control_hardware:/opt/ros/humble /usr/bin/cmake --install /home/epon/AutoDrive/autonomous_combine/build/common_interface
+[4.583s] -- Install configuration: ""
+[4.583s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/ament_index/resource_index/rosidl_interfaces/common_interface
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__type_support.h
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__type_support.h
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__functions.c
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__struct.h
+[4.584s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__functions.h
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__functions.c
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__struct.h
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__functions.h
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/key_ctrl.h
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/rosidl_generator_c__visibility_control.h
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/ser_com_struct.h
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/library_path.sh
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/library_path.dsv
+[4.585s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_generator_c.so
+[4.586s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_generator_c.so" to ""
+[4.586s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface
+[4.586s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg
+[4.586s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.586s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail
+[4.586s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__rosidl_typesupport_fastrtps_c.h
+[4.586s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__rosidl_typesupport_fastrtps_c.h
+[4.586s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_fastrtps_c.so
+[4.586s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_fastrtps_c.so" to ""
+[4.587s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface
+[4.587s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.587s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__type_support.c
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__type_support.c
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__rosidl_typesupport_introspection_c.h
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__rosidl_typesupport_introspection_c.h
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_introspection_c.so
+[4.587s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_introspection_c.so" to ""
+[4.587s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_c.so
+[4.587s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_c.so" to ""
+[4.588s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface
+[4.588s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.588s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__builder.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__struct.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__struct.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__traits.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__type_support.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__traits.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__type_support.hpp
+[4.588s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__builder.hpp
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/ser_com_struct.hpp
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/key_ctrl.hpp
+[4.589s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface
+[4.589s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg
+[4.589s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/dds_fastrtps
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__rosidl_typesupport_fastrtps_cpp.hpp
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__rosidl_typesupport_fastrtps_cpp.hpp
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.589s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_fastrtps_cpp.so
+[4.589s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.590s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface
+[4.590s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg
+[4.590s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__rosidl_typesupport_introspection_cpp.hpp
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/ser_com_struct__type_support.cpp
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__rosidl_typesupport_introspection_cpp.hpp
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/include/common_interface/common_interface/msg/detail/key_ctrl__type_support.cpp
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_introspection_cpp.so
+[4.590s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_introspection_cpp.so" to ""
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_cpp.so
+[4.590s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_typesupport_cpp.so" to ""
+[4.590s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/pythonpath.sh
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/pythonpath.dsv
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface-0.0.0-py3.10.egg-info
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface-0.0.0-py3.10.egg-info/top_level.txt
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface-0.0.0-py3.10.egg-info/PKG-INFO
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/_common_interface_s.ep.rosidl_typesupport_introspection_c.c
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/_common_interface_s.ep.rosidl_typesupport_c.c
+[4.591s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/_common_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/__init__.py
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/_key_ctrl.py
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/_key_ctrl_s.c
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/__init__.py
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/_ser_com_struct_s.c
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/_ser_com_struct.py
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/libcommon_interface__rosidl_generator_py.so
+[4.592s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.624s] Listing '/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface'...
+[4.624s] Compiling '/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/__init__.py'...
+[4.624s] Listing '/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg'...
+[4.624s] Compiling '/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/__init__.py'...
+[4.624s] Compiling '/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/_key_ctrl.py'...
+[4.624s] Compiling '/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/msg/_ser_com_struct.py'...
+[4.628s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.628s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.628s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.628s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.629s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.629s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/local/lib/python3.10/dist-packages/common_interface/common_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.629s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_generator_py.so
+[4.629s] -- Set runtime path of "/home/epon/AutoDrive/autonomous_combine/install/common_interface/lib/libcommon_interface__rosidl_generator_py.so" to ""
+[4.629s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/msg/KeyCtrl.idl
+[4.629s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/msg/SerComStruct.idl
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/msg/KeyCtrl.msg
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/msg/SerComStruct.msg
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/package.xml
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/ament_index/resource_index/package_run_dependencies/common_interface
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/ament_index/resource_index/parent_prefix_path/common_interface
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/ament_prefix_path.sh
+[4.630s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/ament_prefix_path.dsv
+[4.631s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/path.sh
+[4.631s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/environment/path.dsv
+[4.631s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/local_setup.bash
+[4.631s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/local_setup.sh
+[4.631s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/local_setup.zsh
+[4.631s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/local_setup.dsv
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/package.dsv
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/ament_index/resource_index/packages/common_interface
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_generator_cExport.cmake
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_generator_cExport-noconfig.cmake
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.632s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_introspection_cExport.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_cExport.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_cExport-noconfig.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_generator_cppExport.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_introspection_cppExport.cmake
+[4.633s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_cppExport.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_generator_pyExport.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/export_common_interface__rosidl_generator_pyExport-noconfig.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/rosidl_cmake-extras.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/ament_cmake_export_targets-extras.cmake
+[4.634s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.635s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.635s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interfaceConfig.cmake
+[4.635s] -- Installing: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/cmake/common_interfaceConfig-version.cmake
+[4.635s] -- Up-to-date: /home/epon/AutoDrive/autonomous_combine/install/common_interface/share/common_interface/package.xml
+[4.638s] Invoked command in '/home/epon/AutoDrive/autonomous_combine/build/common_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/epon/AutoDrive/autonomous_combine/install/robot_simulation:/home/epon/AutoDrive/autonomous_combine/install/robot_navigation:/home/epon/AutoDrive/autonomous_combine/install/my_launch:/home/epon/AutoDrive/autonomous_combine/install/control_hardware:/opt/ros/humble /usr/bin/cmake --install /home/epon/AutoDrive/autonomous_combine/build/common_interface
