@@ -1,6 +1,6 @@
 # Update Recordings
 
-## control hardware
+## robot control hardware
 
 package desciptions:
 
@@ -22,7 +22,6 @@ carto:
 nav2:
 
 1. load nav2 lifecycle package
-
 2. depend config files:
 
 * nava_cart_params.yaml
