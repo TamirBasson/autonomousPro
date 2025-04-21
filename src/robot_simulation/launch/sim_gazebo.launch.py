@@ -10,11 +10,11 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
     # Define paths for URDF and RViz config
     urdf_path = PathJoinSubstitution([
-        FindPackageShare("robot_description"), "urdf", "autonomous_robot.urdf.xacro"
+        FindPackageShare("autonomous_robot_description"), "urdf", "autonomous_robot.urdf.xacro"
     ])
 
     rviz_config_path = PathJoinSubstitution([
-        FindPackageShare("robot_description"), "rviz", "urdf_config.rviz"
+        FindPackageShare("autonomous_robot_description"), "rviz", "urdf_config.rviz"
     ])
 
     # Declare arguments
@@ -98,14 +98,20 @@ def generate_launch_description():
 
     # Twist Mux changing the topic name, instead of /cmd_vel it will be /diff_cont/cmd_vel_unstamped 
     # and giving priority.
-    twist_mux_params = os.path.join(get_package_share_directory('robot_description'),'config','twist_mux.yaml')
+    twist_mux_params = os.path.join(get_package_share_directory('autonomous_robot_description'),'config','twist_mux.yaml')
     twist_mux = Node(
             package="twist_mux",
             executable="twist_mux",
             parameters=[twist_mux_params, {'use_sim_time': True}],
             remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
         )
-
+    # cart_odom= Node(
+    #             package='calc_odom',           # Name of the package
+    #             executable='cartographer_odom', # Name of the executable
+    #             name='cartographer_odom',      # Optional name for the node
+    #             output='screen',               # Output logs to the screen
+    #             parameters=[]                  # Add any parameters if needed
+    #         )
 
     return LaunchDescription([
         declare_urdf_path,
@@ -118,6 +124,6 @@ def generate_launch_description():
         spawn_joint_board_controller,
         rviz_launch,
         twist_mux
-        
+        # cart_odom
 
     ])
