@@ -27,7 +27,7 @@ from launch.substitutions import ThisLaunchFileDir
 
 def generate_launch_description():
     # Launch configuration
-    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     
     # Get the path to the 'autonomous_robot_description' package
     autonomous_robot_description_prefix = get_package_share_directory('autonomous_robot_description')
@@ -57,7 +57,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             'use_sim_time',
-            default_value='false',
+            default_value='true',
             description='Use simulation (Gazebo) clock if true'
         ),
         DeclareLaunchArgument(
