@@ -3,4 +3,5 @@ build/
 install/
 log/
 .vscode/
-core
+core/
+.cursor/
