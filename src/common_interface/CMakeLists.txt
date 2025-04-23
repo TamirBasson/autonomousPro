@@ -21,6 +21,7 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/KeyCtrl.msg"
   "msg/SerComStruct.msg"
+  "msg/RectDepth.msg"
   DEPENDENCIES std_msgs geometry_msgs
 )
 
