@@ -22,7 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'realsense_rgbd_publisher = robot_rs_camera_driver.realsense_rgbd_publisher:main'
+            'realsense_rgbd_publisher = robot_rs_camera_driver.realsense_rgbd_publisher:main',
+            'yolo_dectetor_node = robot_rs_camera_driver.yolo_detector_node:main'
         ],
     },
 )

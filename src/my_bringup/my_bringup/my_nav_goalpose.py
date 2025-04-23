@@ -17,11 +17,7 @@ class SimpleNav(Node):
         self.target_depth = self.create_subscription(RectDepth, 'task/rect_depth', self.exec_callback, 10)
         self.pose_sub = self.create_subscription(
             PoseStamped,
-<<<<<<< HEAD
-            '/amcl_pose',  # You can replace this with /odom based on your actual situation
-=======
             '/odom',  
->>>>>>> b979a8f (add rs_cam vlm need to test)
             self.pose_callback,
             10
         )
@@ -100,19 +96,11 @@ def main(args=None):
     rclpy.init(args=args)
     node = SimpleNav()
     
-<<<<<<< HEAD
-    # Wait a moment before sending goal, wait for system to be ready
-    import time
-    time.sleep(2)
-    
-    # Example target point: x=1.0, y=1.5, theta=90 degrees
-    node.send_goal(1.0, 1.5, math.radians(90))
-=======
     # delay to send goal，waiting for system ready
     import time
     time.sleep(2)
->>>>>>> b979a8f (add rs_cam vlm need to test)
 
+    # send_goal()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

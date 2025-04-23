@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 from setuptools import setup
-=======
-from setuptools import find_packages, setup
->>>>>>> b979a8f (add rs_cam vlm need to test)
 import os
 from glob import glob
 
@@ -16,11 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-<<<<<<< HEAD
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
-=======
-        ('share/' + package_name + '/scripts', glob('scripts/*.py')),
->>>>>>> b979a8f (add rs_cam vlm need to test)
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -31,12 +23,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-<<<<<<< HEAD
             'image_pose_logger = my_bringup.image_pose_logger:main',
             'live_pose_plotter = my_bringup.live_pose_plotter:main',
-=======
-            "my_nav_goalpose_node = my_bringup.my_nav_goalpose:main"
->>>>>>> b979a8f (add rs_cam vlm need to test)
+            'my_nav_goalpose_node = mybringup.my_nav_goalpose:main',
+            'my_nav_waypoint_node = mybringup.my_nav_waypoint:main',
         ],
     },
 )
