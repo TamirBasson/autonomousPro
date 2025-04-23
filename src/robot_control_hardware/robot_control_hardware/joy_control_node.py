@@ -7,7 +7,7 @@ from common_interface.msg import KeyCtrl
 # use for read rc input and translate to Control input
 '''
 class MyJoy(Node):
-    DEADZONE = 0.05  # 设定死区
+    DEADZONE = 0.05  # Set deadzone threshold
     def __init__(self):
         super().__init__('joy_control_node')
         # Create a subscription to the "/joy" topic for Joy messages
@@ -16,7 +16,7 @@ class MyJoy(Node):
         self.publisher = self.create_publisher(KeyCtrl, '/cmd_joy', 10)
         # self.publisher = self.create_publisher(KeyStatus, '/cmd_key',30)
 
-        self.manual_mode = True  # 设定是否为手动模式
+        self.manual_mode = True  # Set manual mode flag
     def callback(self, msg):
         KeyCtrlMsg = KeyCtrl()  # Create a KeyStatus message to hold key status
         if len(msg.buttons) > 0:
@@ -31,7 +31,7 @@ class MyJoy(Node):
 
         self.publisher.publish(KeyCtrlMsg)
         # self.get_logger().info(f"{self.manual_mode},| {KeyCtrlMsg.manual_spd.linear.x}")
-    # 处理摇杆死区
+    # Handle joystick deadzone
     def apply_deadzone(self, value, deadzone=DEADZONE):
         if abs(value) < deadzone:
             return 0.0

@@ -34,15 +34,15 @@ def main(args=None):
     rclpy.init(args=args)
     node = WaypointNav()
 
-    # 目标点列表：(x, y, 朝向角度°)
+    # Waypoint list: (x, y, heading angle in degrees)
     waypoints = [
-        (1.0, 1.0, 0),       # 第一个点
-        (2.0, 1.0, 90),      # 第二个点
-        (2.0, 2.0, 180),     # 第三个点
-        (1.0, 2.0, -90),     # 第四个点
+        (1.0, 1.0, 0),       # First point
+        (2.0, 1.0, 90),      # Second point
+        (2.0, 2.0, 180),     # Third point
+        (1.0, 2.0, -90),     # Fourth point
     ]
 
-    # 稍等一下系统
+    # Wait a moment for the system
     import time
     time.sleep(2)
 

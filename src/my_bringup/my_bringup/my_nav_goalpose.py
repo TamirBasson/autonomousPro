@@ -12,7 +12,7 @@ class SimpleNav(Node):
 
         self.pose_sub = self.create_subscription(
             PoseStamped,
-            '/amcl_pose',  # 你可以根据实际情况换成 /odom
+            '/amcl_pose',  # You can replace this with /odom based on your actual situation
             self.pose_callback,
             10
         )
@@ -43,11 +43,11 @@ def main(args=None):
     rclpy.init(args=args)
     node = SimpleNav()
     
-    # 延迟一会再发 goal，等 system ready
+    # Wait a moment before sending goal, wait for system to be ready
     import time
     time.sleep(2)
     
-    # 示例目标点：x=1.0, y=1.5, theta=90度
+    # Example target point: x=1.0, y=1.5, theta=90 degrees
     node.send_goal(1.0, 1.5, math.radians(90))
 
     rclpy.spin(node)
