@@ -9,7 +9,7 @@
     group_ip: 224.1.1.2 # Multicast IP
     use_time_service: false # Whether to use external time service (GPS PTP NTP) true: use external time service
     min_range: 0.15 # Minimum scanning range (points below this value will be filtered)
-    max_range: 20.0 # Maximum scanning range (points above this value will be filtered)
+    max_range: 10.0 # Maximum scanning range (points above this value will be filtered)
     angle_disable_min: 0 # Minimum angle crop for scanning (unit: 0.01°)
     angle_disable_max: 0 # Maximum angle crop for scanning (unit: 0.01°)
     distance_unit: 0.1

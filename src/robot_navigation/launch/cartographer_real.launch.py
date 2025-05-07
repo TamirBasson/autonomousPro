@@ -14,7 +14,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     
     # Get the path to the 'autonomous_robot_description' package
-    autonomous_robot_description_prefix = get_package_share_directory('autonomous_robot_description')
+    autonomous_robot_description_prefix = get_package_share_directory('robot_navigation')
 
     # Set the configuration directory to the 'config' folder in 'autonomous_robot_description'
     cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(

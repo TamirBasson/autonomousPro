@@ -39,7 +39,7 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 
 -- Configure 2D trajectory builder
 TRAJECTORY_BUILDER_2D.min_range = 0.5 -- Minimum range for valid LiDAR data (in meters)
-TRAJECTORY_BUILDER_2D.max_range = 20.0 -- Maximum range for valid LiDAR data (in meters)
+TRAJECTORY_BUILDER_2D.max_range = 10.0 -- Maximum range for valid LiDAR data (in meters)
 TRAJECTORY_BUILDER_2D.missing_data_ray_length = 10.0 -- Length to assign to missing rays (in meters)
 TRAJECTORY_BUILDER_2D.use_imu_data = true -- Enable IMU for pose estimation
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true -- Use scan matching for better alignment

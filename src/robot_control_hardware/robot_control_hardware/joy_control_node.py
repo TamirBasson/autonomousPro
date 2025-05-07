@@ -17,6 +17,7 @@ class MyJoy(Node):
         # self.publisher = self.create_publisher(KeyStatus, '/cmd_key',30)
 
         self.manual_mode = True  # Set manual mode flag
+        self.get_logger().info("waitting for joy control")
     def callback(self, msg):
         KeyCtrlMsg = KeyCtrl()  # Create a KeyStatus message to hold key status
         if len(msg.buttons) > 0:

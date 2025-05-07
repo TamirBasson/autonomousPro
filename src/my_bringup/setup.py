@@ -25,8 +25,8 @@ setup(
         'console_scripts': [
             'image_pose_logger = my_bringup.image_pose_logger:main',
             'live_pose_plotter = my_bringup.live_pose_plotter:main',
-            'my_nav_goalpose_node = mybringup.my_nav_goalpose:main',
-            'my_nav_waypoint_node = mybringup.my_nav_waypoint:main',
+            'my_nav_goalpose_node = my_bringup.my_nav_goalpose:main',
+            'my_nav_waypoint_node = my_bringup.my_nav_waypoint:main',
         ],
     },
 )

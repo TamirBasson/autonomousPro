@@ -19,7 +19,7 @@ def generate_launch_description():
 
     robot_mpu9250driver_node = Node(
         package='robot_mpu9250driver',
-        executable='mpu9250driver',
+        executable='robot_mpu9250driver',
         name='robot_mpu9250driver_node',
         output="screen",
         emulate_tty=True,
