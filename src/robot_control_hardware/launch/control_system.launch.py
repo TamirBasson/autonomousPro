@@ -70,7 +70,7 @@ def generate_launch_description():
         declare_urdf_path,
         robot_state_publisher,
         joint_state_publisher,
-        twist_mux,
+        # twist_mux,
         teleop_joy_node,
         cmd_vel_to_gpio_node
     ])

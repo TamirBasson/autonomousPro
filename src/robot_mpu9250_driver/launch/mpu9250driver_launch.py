@@ -17,15 +17,16 @@ def generate_launch_description():
                                                share_dir, 'params', 'mpu9250.yaml'),
                                            description='Path to the ROS2 parameters file to use.')
 
-    robot_mpu9250driver_node = Node(
+    mpu9250driver_node = Node(
         package='robot_mpu9250driver',
         executable='robot_mpu9250driver',
-        name='robot_mpu9250driver_node',
+        name='mpu9250driver_node',
         output="screen",
         emulate_tty=True,
-        parameters=[parameter_file]
+        parameters=[parameter_file],
+        arguments=['--ros-args', '--log-level', 'warn']
     )
 
     ld.add_action(params_declare)
-    ld.add_action(robot_mpu9250driver_node)
+    ld.add_action(mpu9250driver_node)
     return ld

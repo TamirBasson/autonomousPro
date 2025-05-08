@@ -4,7 +4,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from common_interface.msg import KeyCtrl
 from gpiozero import PWMOutputDevice, DigitalOutputDevice
-
+from builtin_interfaces.msg import Time
 class CmdVelToPwmGPIO(Node):
     LINEAR_SCALE = 1.0  # Linear velocity scale factor
     ANGULAR_SCALE = 2.5 # Angular velocity scale factor
@@ -28,6 +28,11 @@ class CmdVelToPwmGPIO(Node):
         except Exception as e:
             self.get_logger().error(f"GPIO initialization failed: {e}")
             return
+        self.timer = self.create_timer(0.2, self.logSpeed)
+
+
+    def logSpeed(self):
+        self.get_logger().info(f"PWM -> Left: {self.pwm_l.value}, Right: {self.pwm_r.value} | mode:{self.manualCtrl}")
 
     def cmd_joy_callback(self, msg):
         self.manualCtrl = not msg.allow_nav
@@ -38,7 +43,7 @@ class CmdVelToPwmGPIO(Node):
 
             v_left = linear_x - (self.wheel_base / 2.0) * angular_z
             v_right = linear_x + (self.wheel_base / 2.0) * angular_z
-            self.get_logger().info(f"v_left: {v_left}, v_right: {v_right} | mode:{self.manualCtrl}")
+            # self.get_logger().info(f"v_left: {v_left}, v_right: {v_right} | mode:{self.manualCtrl}")
 
             # Convert speed to PWM
             pwm_left = self.velocity_to_pwm(v_left)
@@ -54,7 +59,7 @@ class CmdVelToPwmGPIO(Node):
 
             self.gear_l.value = False
             self.gear_r.value = False
-        self.get_logger().info(f"PWM -> Left: {self.pwm_l.value}, Right: {self.pwm_r.value} | mode:{self.manualCtrl}")
+        # self.get_logger().info(f"PWM -> Left: {self.pwm_l.value}, Right: {self.pwm_r.value} | mode:{self.manualCtrl}")
     def cmd_vel_callback(self,msg):
         if not self.manualCtrl:
             linear_x = msg.linear.x * self.LINEAR_SCALE
@@ -75,7 +80,7 @@ class CmdVelToPwmGPIO(Node):
             self.pwm_l.value = min(abs(pwm_left), self.MAX_SPEED)
             self.pwm_r.value = min(abs(pwm_right), self.MAX_SPEED)
 
-            self.get_logger().info(f"PWM -> Left: {self.pwm_l.value}, Right: {self.pwm_r.value}|mode{self.manualCtrl}")
+            # self.get_logger().info(f"PWM -> Left: {self.pwm_l.value}, Right: {self.pwm_r.value}|mode{self.manualCtrl}")
 
             self.gear_l.value = False
             self.gear_r.value = False

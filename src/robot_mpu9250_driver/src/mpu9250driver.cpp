@@ -47,17 +47,17 @@ void mpu9250driver::handleInput()
   message.header.stamp = this->get_clock()->now();
   message.header.frame_id = "base_link";
   // Direct measurements
-  // message.linear_acceleration_covariance = {0};
-  // message.linear_acceleration.x = mpu9250_->getAccelerationX();
-  // message.linear_acceleration.y = mpu9250_->getAccelerationY();
-  // message.linear_acceleration.z = mpu9250_->getAccelerationZ();
+  message.linear_acceleration_covariance = {0};
+  message.linear_acceleration.x = mpu9250_->getAccelerationX();
+  message.linear_acceleration.y = mpu9250_->getAccelerationY();
+  message.linear_acceleration.z = mpu9250_->getAccelerationZ();
   message.angular_velocity_covariance[0] = {0};
   message.angular_velocity.x = mpu9250_->getAngularVelocityX()*DEG2RAD;
   message.angular_velocity.y = mpu9250_->getAngularVelocityY()*DEG2RAD;
   message.angular_velocity.z = mpu9250_->getAngularVelocityZ()*DEG2RAD;
   // Calculate euler angles, convert to quaternion and store in message
   message.orientation_covariance = {0};
-  // calculateOrientation(message);
+  calculateOrientation(message);
   publisher_->publish(message);
 }
 

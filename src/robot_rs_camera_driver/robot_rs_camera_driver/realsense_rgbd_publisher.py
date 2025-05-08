@@ -21,7 +21,7 @@ class RealSenseRGBDPublisher(Node):
         self.pipeline.start(config)
 
         # 定时发布
-        self.timer = self.create_timer(1.0 / 30.0, self.publish_frames)
+        self.timer = self.create_timer(1.0 / 200.0, self.publish_frames)
 
     def publish_frames(self):
         frames = self.pipeline.wait_for_frames()

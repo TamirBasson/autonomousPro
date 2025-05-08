@@ -15,13 +15,23 @@ def generate_launch_description():
     control_launch = os.path.join(
         get_package_share_directory('robot_control_hardware'), 'launch', 'control_system.launch.py')
 
-    return LaunchDescription([
-        # Step 1: start MPU9250
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(mpu9250_launch)
-        ),
+    realsense_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('realsense2_camera'),
+                'launch',
+                'rs_launch.py'
+            )
+        )
+    )
 
-        # Step 2: logging 3s ， start LSLiDAR
+    return LaunchDescription([
+        # Step 1: Start MPU9250
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(mpu9250_launch)
+        # ),
+
+        # Step 2: Wait 3s, then start LSLiDAR
         TimerAction(
             period=3.0,
             actions=[
@@ -31,13 +41,21 @@ def generate_launch_description():
             ]
         ),
 
-        # Step 3: logging another 3s，start control hardware
+        # Step 3: Wait another 3s, then start control system
         TimerAction(
-            period=6.0,  
+            period=6.0,
             actions=[
                 IncludeLaunchDescription(
                     PythonLaunchDescriptionSource(control_launch)
                 )
+            ]
+        ),
+
+        # Step 4: Wait another 4s, then start RealSense
+        TimerAction(
+            period=10.0,
+            actions=[
+                realsense_launch
             ]
         ),
     ])

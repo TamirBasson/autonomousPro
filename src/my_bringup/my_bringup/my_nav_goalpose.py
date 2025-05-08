@@ -56,9 +56,9 @@ class SimpleNav(Node):
         
         if not self.current_pose is None:
             current = self.current_pose
-            robot_x = current.position.x
-            robot_y = current.position.y
-            robot_yaw = self.get_yaw_from_quaternion(current.orientation)
+            robot_x = current.pose.position.x
+            robot_y = current.pose.position.y
+            robot_yaw = self.get_yaw_from_quaternion(current.pose.orientation)
 
             # 6. from base_link tf to map 坐标（简单用 2D 旋转平移）
             target_x = robot_x + self.diff_x
