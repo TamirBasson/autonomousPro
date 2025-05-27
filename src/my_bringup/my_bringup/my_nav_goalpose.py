@@ -12,8 +12,9 @@ from tf2_geometry_msgs.tf2_geometry_msgs import do_transform_pose
 from geometry_msgs.msg import Quaternion,Point
 
 # from my_bringup.scripts import calc_pose
-from common_interface.msg import RectDepth
+from common_interface.msg import RectDepth, Camera2map
 from std_msgs.msg import Int32MultiArray, Float32MultiArray,String
+
 class SimpleNav(Node):
     def __init__(self):
         super().__init__('simple_nav_client')
@@ -26,6 +27,7 @@ class SimpleNav(Node):
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
         self.state_pub = self.create_publisher(String, '/robot_state', 10)
+        self.camera2map_coodinate_pub = self.create_publisher(Camera2map, '/camera2map', 10)
         self.timer = self.create_timer(0.5, self.update_pose_from_tf) 
 
 
@@ -129,6 +131,10 @@ class SimpleNav(Node):
             self.get_logger().info(
                 f"📍 Current pose (camera_link in map): x={pose.pose.position.x:.2f}, y={pose.pose.position.y:.2f},yaw = {self.get_yaw_from_quaternion(pose.pose.orientation)}"
             )
+            coordinate_msg = Camera2map()
+            coordinate_msg.coordinate = Float32MultiArray()
+            coordinate_msg.coordinate.data = [pose.pose.position.x, pose.pose.position.y]
+            self.camera2map_coodinate_pub(coordinate_msg)
 
         except Exception as e:
             self.get_logger().warn(f"TF lookup failed: {e}")
