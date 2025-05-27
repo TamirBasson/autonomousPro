@@ -7,8 +7,8 @@ from gpiozero import PWMOutputDevice, DigitalOutputDevice
 from builtin_interfaces.msg import Time
 class CmdVelToPwmGPIO(Node):
     LINEAR_SCALE = 1.0  # Linear velocity scale factor
-    ANGULAR_SCALE = 2.5 # Angular velocity scale factor
-    MAX_SPEED = 0.52
+    ANGULAR_SCALE = 3.0 # Angular velocity scale factor
+    MAX_SPEED = 0.47
 
     manualCtrl = True
     def __init__(self):
@@ -28,7 +28,7 @@ class CmdVelToPwmGPIO(Node):
         except Exception as e:
             self.get_logger().error(f"GPIO initialization failed: {e}")
             return
-        self.timer = self.create_timer(0.2, self.logSpeed)
+        self.timer = self.create_timer(0.4, self.logSpeed)
 
 
     def logSpeed(self):
@@ -68,6 +68,8 @@ class CmdVelToPwmGPIO(Node):
             v_left = linear_x - (self.wheel_base / 2.0) * angular_z
             v_right = linear_x + (self.wheel_base / 2.0) * angular_z
 
+            v_left = v_left if v_left >= 0 else 0
+            v_right = v_right if v_right >= 0 else 0
             # Convert speed to PWM
             pwm_left = self.velocity_to_pwm(v_left)
             pwm_right = self.velocity_to_pwm(v_right)
@@ -90,7 +92,7 @@ class CmdVelToPwmGPIO(Node):
         threshold = 0.05
         if abs(velocity) < threshold:
             return 0  # Speed too low, stop
-        pwm_value = (0.50 * abs(velocity) + 0.35)
+        pwm_value = (0.70 * abs(velocity) + 0.36)
         if velocity < 0:
             return -pwm_value 
         else:

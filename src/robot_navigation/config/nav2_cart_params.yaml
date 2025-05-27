@@ -76,8 +76,8 @@ controller_server:
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.25
-      yaw_goal_tolerance: 0.25
+      xy_goal_tolerance: 2.0
+      yaw_goal_tolerance: 1.0
 
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
@@ -114,8 +114,8 @@ local_costmap:
       robot_base_frame: base_footprint
       use_sim_time: False
       rolling_window: true
-      width: 3
-      height: 3
+      width: 5 # 3
+      height: 5 #3
       resolution: 0.05
       robot_radius: 0.8
       plugins: ["voxel_layer", "inflation_layer"]
@@ -176,6 +176,6 @@ planner_server:
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
-      tolerance: 0.5
+      tolerance: 1.0
       use_astar: false
       allow_unknown: true

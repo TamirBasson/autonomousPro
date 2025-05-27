@@ -5,7 +5,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
-    # path
+
     mpu9250_launch = os.path.join(
         get_package_share_directory('robot_mpu9250driver'), 'launch', 'mpu9250driver_launch.py')
 
@@ -27,9 +27,9 @@ def generate_launch_description():
 
     return LaunchDescription([
         # Step 1: Start MPU9250
-        # IncludeLaunchDescription(
-        #     PythonLaunchDescriptionSource(mpu9250_launch)
-        # ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(mpu9250_launch)
+        ),
 
         # Step 2: Wait 3s, then start LSLiDAR
         TimerAction(

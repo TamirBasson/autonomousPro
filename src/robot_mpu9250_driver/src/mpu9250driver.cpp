@@ -55,6 +55,12 @@ void mpu9250driver::handleInput()
   message.angular_velocity.x = mpu9250_->getAngularVelocityX()*DEG2RAD;
   message.angular_velocity.y = mpu9250_->getAngularVelocityY()*DEG2RAD;
   message.angular_velocity.z = mpu9250_->getAngularVelocityZ()*DEG2RAD;
+  if(message.angular_velocity.x < -2.0)
+    message.angular_velocity.x=0;
+  if(message.angular_velocity.y < -2.0)
+    message.angular_velocity.y=0;
+  if(message.angular_velocity.z < -2.0)
+    message.angular_velocity.z=0;
   // Calculate euler angles, convert to quaternion and store in message
   message.orientation_covariance = {0};
   calculateOrientation(message);

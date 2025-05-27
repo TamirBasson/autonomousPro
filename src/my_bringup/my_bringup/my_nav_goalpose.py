@@ -7,30 +7,25 @@ from builtin_interfaces.msg import Time
 import math
 
 from tf2_ros import Buffer, TransformListener
-from geometry_msgs.msg import TransformStamped
 
+from tf2_geometry_msgs.tf2_geometry_msgs import do_transform_pose
+from geometry_msgs.msg import Quaternion,Point
 
 # from my_bringup.scripts import calc_pose
 from common_interface.msg import RectDepth
-from std_msgs.msg import Int32MultiArray, Float32MultiArray
+from std_msgs.msg import Int32MultiArray, Float32MultiArray,String
 class SimpleNav(Node):
     def __init__(self):
         super().__init__('simple_nav_client')
         self.diff_x, self.diff_y = [0,0]
         self.theta = 0
-        self.current_pose = None
-
+        self.camera_pose = None
         self.nav_to_pose_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
         self.target_depth = self.create_subscription(RectDepth, 'task/rect_depth', self.exec_callback, 10)
-        self.pose_sub = self.create_subscription(
-            PoseStamped,
-            '/odom',  
-            self.pose_callback,
-            10
-        )
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
+        self.state_pub = self.create_publisher(String, '/robot_state', 10)
         self.timer = self.create_timer(0.5, self.update_pose_from_tf) 
 
 
@@ -48,39 +43,74 @@ class SimpleNav(Node):
         self.nav_to_pose_client.wait_for_server()
         self.nav_to_pose_client.send_goal_async(goal_msg)
 
+        self.state_pub.publish(String(data="navigating"))
+
+        future = self.nav_to_pose_client.send_goal_async(goal_msg)
+        future.add_done_callback(self.goal_response_callback)
+
         self.get_logger().info(f"Sent goal to: x={x}, y={y}, theta={theta}")
+
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.state_pub.publish(String(data="failed"))
+            return
+        result_future = goal_handle.get_result_async()
+        result_future.add_done_callback(self.goal_result_callback)
+
+    def goal_result_callback(self, future):
+        result = future.result().result
+        status = future.result().status
+
+        if status == 4:  # SUCCEEDED
+            self.get_logger().info("✅ reached!")
+            self.state_pub.publish(String(data="reachGoal"))
+        else:
+            self.get_logger().warn(f"⚠️ failure: {status}")
+            # self.state_pub.publish(String(data="failed"))
+
 
     def exec_callback(self, msg):
         self.diff_x, self.diff_y = msg.coordinate_diff.data
         self.theta = msg.theta
-        
-        if not self.current_pose is None:
-            current = self.current_pose
-            robot_x = current.pose.position.x
-            robot_y = current.pose.position.y
-            robot_yaw = self.get_yaw_from_quaternion(current.pose.orientation)
 
-            # 6. from base_link tf to map 坐标（简单用 2D 旋转平移）
-            target_x = robot_x + self.diff_x
-            target_y = robot_y + self.diff_y
-            target_yaw = robot_yaw + self.theta
-            self.get_logger().info(f"Sending goal: x={target_x:.2f}, y={target_y:.2f}, theta={target_yaw:.2f}")
+        if self.camera_pose is not None:
+            cam_x = self.camera_pose.pose.position.x
+            cam_y = self.camera_pose.pose.position.y
+            cam_yaw = self.get_yaw_from_quaternion(self.camera_pose.pose.orientation)
+            self.get_logger().info(
+                f"obj in map base: X:{ (self.diff_x * math.cos(cam_yaw) + self.diff_y * math.sin(cam_yaw)) },Y:{(- self.diff_x * math.sin(cam_yaw) + self.diff_y * math.cos(cam_yaw))}"
+            )
+            target_x = cam_x + self.diff_x * math.cos(cam_yaw) - self.diff_y * math.sin(cam_yaw)
+            target_y = cam_y + self.diff_x * math.sin(cam_yaw) + self.diff_y * math.cos(cam_yaw)
+            target_yaw = cam_yaw + self.theta
+
+            self.get_logger().info(
+                f"📦 Object in map → x={target_x:.2f}, y={target_y:.2f}, θ={target_yaw:.2f}"
+            )
+
             self.send_goal(target_x, target_y, target_yaw)
         else:
-            self.get_logger().warn("No current pose yet")
+            self.get_logger().warn("⚠️ No camera pose yet.")
 
-    def pose_callback(self, msg):
-        self.current_pose = msg.pose
-        self.get_logger().info(f"Current position: x={msg.pose.position.x:.2f}, y={msg.pose.position.y:.2f}")
+    # def pose_callback(self, msg):
+    #     self.current_pose = msg.pose
+    #     self.get_logger().info(f"Current position: x={msg.pose.position.x:.2f}, y={msg.pose.position.y:.2f}")
 
 
     def update_pose_from_tf(self):
         try:
-            if not self.tf_buffer.can_transform('map', 'base_link', rclpy.time.Time(), timeout=rclpy.duration.Duration(seconds=2.0)):
-                self.get_logger().warn("⚠️ TF transform map→base_link not available yet.")
+            if not self.tf_buffer.can_transform(
+                'map', 'camera_link', rclpy.time.Time(),
+                timeout=rclpy.duration.Duration(seconds=2.0)
+            ):
+                self.get_logger().warn("⚠️ 18 TF transform map → camera_link not available yet.")
                 return
+
             from geometry_msgs.msg import PoseStamped, Point, Quaternion
-            tf = self.tf_buffer.lookup_transform('map', 'base_link', rclpy.time.Time())
+
+            tf = self.tf_buffer.lookup_transform('map', 'camera_link', rclpy.time.Time())
+
             pose = PoseStamped()
             pose.header = tf.header
             pose.pose.position = Point(
@@ -94,12 +124,16 @@ class SimpleNav(Node):
                 z=tf.transform.rotation.z,
                 w=tf.transform.rotation.w
             )
-            self.current_pose = pose
-            self.get_logger().info(f"📍 Global pose: x={pose.pose.position.x:.2f}, y={pose.pose.position.y:.2f}")
+
+            self.camera_pose = pose
+            self.get_logger().info(
+                f"📍 Current pose (camera_link in map): x={pose.pose.position.x:.2f}, y={pose.pose.position.y:.2f},yaw = {self.get_yaw_from_quaternion(pose.pose.orientation)}"
+            )
+
         except Exception as e:
             self.get_logger().warn(f"TF lookup failed: {e}")
+
     def get_yaw_from_quaternion(self, q):
-        # 欧拉角提取，返回 yaw（绕Z轴旋转）
         siny_cosp = 2 * (q.w * q.z + q.x * q.y)
         cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z)
         return math.atan2(siny_cosp, cosy_cosp)
