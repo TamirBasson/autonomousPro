@@ -25,6 +25,8 @@ from launch_ros.actions import Node
 from launch_ros.descriptions import ComposableNode, ParameterFile
 from nav2_common.launch import RewrittenYaml
 
+from launch_ros.substitutions import FindPackageShare
+from launch.substitutions import PathJoinSubstitution
 
 def generate_launch_description():
     # Get the launch directory
@@ -58,10 +60,18 @@ def generate_launch_description():
                   ('/tf_static', 'tf_static')]
 
     # Create our own temporary YAML files that include substitutions
+    # param_substitutions = {
+    #     'use_sim_time': use_sim_time,
+    #     'autostart': autostart}
     param_substitutions = {
         'use_sim_time': use_sim_time,
-        'autostart': autostart}
-
+        'default_bt_xml_filename': PathJoinSubstitution([
+            FindPackageShare('robot_navigation'),
+            'behavior_trees',
+            'navigate_to_pose_custom.xml'
+        ]),
+        'autostart': autostart
+    }
     configured_params = ParameterFile(
         RewrittenYaml(
             source_file=params_file,
@@ -157,7 +167,14 @@ def generate_launch_description():
                 output='screen',
                 respawn=use_respawn,
                 respawn_delay=2.0,
-                parameters=[configured_params],
+                    parameters=[
+                        # params_file,
+                        {
+                            'use_sim_time': use_sim_time,
+                            'autostart': autostart,
+                            'default_nav_to_pose_bt_xml': "/host_root/home/tamir/autonomousPro/src/robot_navigation/behavior_trees/navigate_to_pose_custom.xml",
+                        }
+                    ],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
             Node(
