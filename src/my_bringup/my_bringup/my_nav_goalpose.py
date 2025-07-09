@@ -164,6 +164,7 @@ class SimpleNav(Node):
             coordinate_msg.coordinate = Float32MultiArray()
             yaw = self.get_yaw_from_quaternion(pose.pose.orientation)
             coordinate_msg.coordinate.data = [pose.pose.position.x, pose.pose.position.y, yaw]
+            self.camera2map_coodinate_pub.publish(coordinate_msg)
 
         except Exception as e:
             self.get_logger().warn(f"TF lookup failed: {e}")
