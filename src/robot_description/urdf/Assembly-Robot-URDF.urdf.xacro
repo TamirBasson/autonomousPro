@@ -509,8 +509,7 @@
         </sensor>
     </gazebo>
 
-        <!-- Gazebo Plugin for Lidar -->
-    <gazebo reference="lidar_link">
+    <gazebo reference ="lidar_link">
         <sensor name="laser_link" type="ray">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
@@ -530,9 +529,9 @@
             </ray>
             <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
                 <ros>
-                    <argument>~/out:=scan</argument>   <!-- the topic we are publishing on -->
+                    <argument>~/out:=scan</argument>
                 </ros>
-                <output_type>sensor_msgs/msg/LaserScan</output_type>
+                <output_type>sensor_msgs/LaserScan</output_type>
                 <frame_name>lidar_link</frame_name>
             </plugin>
         </sensor>

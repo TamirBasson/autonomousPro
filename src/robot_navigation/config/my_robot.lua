@@ -7,7 +7,7 @@ options = {
   map_builder = MAP_BUILDER, -- Specifies the map builder to use (2D or 3D mapping)
   trajectory_builder = TRAJECTORY_BUILDER, -- Specifies the trajectory builder (handles sensor data integration)
   map_frame = "map", -- The global frame for the map
-  tracking_frame = "base_link", -- The frame used for tracking the robot's pose
+  tracking_frame = "base_footprint", -- The frame used for tracking the robot's pose
   published_frame = "base_footprint", -- The frame to which Cartographer publishes poses
   odom_frame = "odom", -- The frame for odometry data (usually linked to base_footprint)
 
