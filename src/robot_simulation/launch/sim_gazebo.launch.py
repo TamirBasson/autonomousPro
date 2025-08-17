@@ -1,7 +1,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
@@ -63,12 +63,17 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}]
     )
 
-    # Spawn the robot entity in Gazebo
-    spawn_robot_entity = Node(
-        package="gazebo_ros",
-        executable="spawn_entity.py",
-        output="screen",
-        arguments=["-topic", "robot_description", "-entity", "autonomous_robot"]
+    # Spawn the robot entity in Gazebo with delay
+    spawn_robot_entity = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+                package="gazebo_ros",
+                executable="spawn_entity.py",
+                output="screen",
+                arguments=["-topic", "robot_description", "-entity", "autonomous_robot"]
+            )
+        ]
     )
 
     # # Spawning the differential controller
