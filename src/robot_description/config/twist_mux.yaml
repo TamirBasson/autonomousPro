@@ -1,0 +1,35 @@
+# Twist Mux configuration for autonomous robot
+# This file configures the twist_mux node to handle multiple velocity command sources
+
+# List of input topics with their priorities
+# Higher priority values mean higher priority
+twist_mux:
+  ros__parameters:
+    # Input topics
+    topics:
+      # Navigation stack commands (highest priority)
+      navigation:
+        topic: /nav_vel
+        timeout: 0.5
+        priority: 100
+      
+      # Teleop commands (medium priority)
+      teleop:
+        topic: /teleop_vel
+        timeout: 0.5
+        priority: 50
+      
+      # Safety stop (lowest priority, but always active)
+      safety:
+        topic: /safety_vel
+        timeout: 0.5
+        priority: 10
+    
+    # Output topic
+    cmd_vel_out: /cmd_vel_out
+    
+    # Timeout for all topics (seconds)
+    timeout: 0.5
+    
+    # Whether to use simulation time
+    use_sim_time: true 

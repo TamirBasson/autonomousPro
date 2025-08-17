@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -41,16 +43,16 @@ def generate_launch_description():
         }]
     )
 
-    # Gazebo Launch
+    # Gazebo Launch with empty world
     gazebo_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             PathJoinSubstitution([
-                FindPackageShare("aws_robomaker_small_warehouse_world"), "launch", "no_roof_small_warehouse.launch.py"
+                FindPackageShare("gazebo_ros"), "launch", "gazebo.launch.py"
             ])
         ]),
         launch_arguments={
-            "world_name": PathJoinSubstitution([
-                FindPackageShare("aws_robomaker_small_warehouse_world"), "worlds", "no_roof_small_warehouse.world"
+            "world": PathJoinSubstitution([
+                FindPackageShare("gazebo_ros"), "worlds", "empty.world"
             ])
         }.items()
     )
@@ -68,23 +70,7 @@ def generate_launch_description():
         package="gazebo_ros",
         executable="spawn_entity.py",
         output="screen",
-        arguments=["-topic", "robot_description", "-entity", "autonomous_robot"]
-    )
-
-    # # Spawning the differential controller
-    spawn_diff_controller = Node(
-        package="controller_manager",
-        executable="spawner",
-        output="screen",
-        arguments=["diff_cont"]
-    )
-
-    # Spawning the joint board controller
-    spawn_joint_board_controller = Node(
-        package="controller_manager",
-        executable="spawner",
-        output="screen",
-        arguments=["joint_broad"]
+        arguments=["-topic", "robot_description", "-entity", "autonomous_robot", "-z", "0.5"]
     )
 
     # RViz Launch
@@ -96,16 +82,14 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}]
     )
 
-    # Twist Mux changing the topic name, instead of /cmd_vel it will be /diff_cont/cmd_vel_unstamped 
-    # and giving priority.
+    # Twist Mux for velocity control
     twist_mux_params = os.path.join(get_package_share_directory('robot_description'),'config','twist_mux.yaml')
     twist_mux = Node(
             package="twist_mux",
             executable="twist_mux",
             parameters=[twist_mux_params, {'use_sim_time': True}],
-            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+            remappings=[('/cmd_vel_out','/cmd_vel')]
         )
-
 
     return LaunchDescription([
         declare_urdf_path,
@@ -114,8 +98,6 @@ def generate_launch_description():
         gazebo_launch,
         joint_state_publisher,
         spawn_robot_entity,
-        spawn_diff_controller,
-        spawn_joint_board_controller,
         rviz_launch,
         twist_mux
-    ])
+    ]) 

@@ -3,7 +3,8 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="autonomous_robot_description">
+  name="robot_description">
+
 
   <link name="base_footprint">
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -37,13 +38,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/base_link.stl"/>
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/base_link.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
+      <material name="grey"/>
     </visual>
 
     <collision>
@@ -51,7 +48,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://autonomous_robot_description/meshes/base_link.stl"/>
+        <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/base_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -78,13 +75,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-      <mesh filename="package://autonomous_robot_description/meshes/front_hinge.stl" />
+      <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_hinge.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="grey"/>
     </visual>
 
     <collision>
@@ -92,7 +85,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-      <mesh filename="package://autonomous_robot_description/meshes/front_hinge.stl" />
+      <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_hinge.stl" scale="1 1 1"/>
 
       </geometry>
     </collision>
@@ -141,13 +134,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/front_wheel_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_wheel_link.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="black"/>
     </visual>
     
     <collision>
@@ -155,7 +144,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-         <mesh filename="package://autonomous_robot_description/meshes/front_wheel_link.stl" />
+         <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
 
@@ -197,14 +186,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-      <mesh filename="package://autonomous_robot_description/meshes/left_wheel_link.stl" />
+      <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/left_wheel_link.stl" scale="1 1 1"/>
 
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
+      <material name="black"/>
     </visual>
     
     <collision>
@@ -212,7 +197,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/left_wheel_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/left_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -257,20 +242,16 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/rear_hinge.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_hinge.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="grey"/>
     </visual>
     <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/rear_hinge.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_hinge.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -318,13 +299,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://autonomous_robot_description/meshes/rear_wheel_link.stl" />
+        <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_wheel_link.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="black"/>
     </visual>
 
     <collision>
@@ -332,7 +309,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-         <mesh filename="package://autonomous_robot_description/meshes/rear_wheel_link.stl" />
+         <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -373,13 +350,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/right_wheel_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/right_wheel_link.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
+      <material name="black"/>
     </visual>
 
     <collision>
@@ -387,7 +360,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/right_wheel_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/right_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -432,20 +405,16 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/camera_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/camera_link.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="yellow"/>
     </visual>
     <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://autonomous_robot_description/meshes/camera_link.stl" />
+        <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/camera_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -463,8 +432,6 @@
     <axis
       xyz="0 0 0" />
   </joint>
-
-
 
   <link
     name="lidar_link">
@@ -487,20 +454,16 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/lidar_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/lidar_link.stl" scale="1 1 1"/>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.00784313725490196 0.23921568627451 0.823529411764706 1" />
-      </material>
+      <material name="cyan"/>
     </visual>
     <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="package://autonomous_robot_description/meshes/lidar_link.stl" />
+          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/lidar_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -518,4 +481,85 @@
     <axis
       xyz="0 0 0" />
   </joint>
-</robot>
+
+    <link name="imu_link"/>
+  <joint name="base_to_imu" type="fixed">
+    <parent link="base_link"/>
+    <child  link="imu_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+      <!-- Gazebo Plugin for IMU -->
+    <gazebo reference="imu_link">
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <update_rate>100.0</update_rate>
+            <plugin name="imu_controller" filename="libgazebo_ros_imu_sensor.so">
+                <ros>
+                    <argument>~/out:=imu</argument> <!--   the topic we are publishing on    -->
+                </ros>
+                <output_type>sensor_msgs/msg/Imu</output_type>
+                <frame_name>imu_link</frame_name>
+            </plugin>
+            <imu>
+                <topic>/imu</topic>
+                <gaussian_noise>0.01</gaussian_noise>
+            </imu>
+        </sensor>
+    </gazebo>
+
+        <!-- Gazebo Plugin for Lidar -->
+    <gazebo reference="lidar_link">
+        <sensor name="laser_link" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>20.0</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>500</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.5</min>
+                    <max>10</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>   <!-- the topic we are publishing on -->
+                </ros>
+                <output_type>sensor_msgs/msg/LaserScan</output_type>
+                <frame_name>lidar_link</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+        <!-- Gazebo Plugin for Camera -->
+    <gazebo reference="camera_link">
+        <sensor name="camera_sensor" type="camera">
+            <pose>0 0 0 0 0 0</pose>
+            <visualize>true</visualize>
+            <update_rate>10.0</update_rate>
+            <camera>
+                <horizontal_fov>1.047</horizontal_fov>
+                <image>
+                    <format>B8G8R8</format>
+                    <width>640</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>8.0</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_optical</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+</robot> 

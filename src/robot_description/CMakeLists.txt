@@ -15,7 +15,7 @@ find_package(ament_cmake REQUIRED)
 
 # Install directories
 install(
-  DIRECTORY config rviz urdf meshes
+  DIRECTORY config rviz urdf meshes  
   DESTINATION share/${PROJECT_NAME}/
 )
 

@@ -58,7 +58,7 @@
 
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-           <parameters>package://autonomous_robot_description/config/joint_controller.yaml</parameters>
+            <parameters>$(find robot_description)/config/joint_controller.yaml</parameters>
         </plugin>
     </gazebo>
 
