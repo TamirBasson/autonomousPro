@@ -423,7 +423,7 @@
     name="base_camera_joint"
     type="fixed">
     <origin
-      xyz="0.23677 3.0058E-05 0.03967"
+      xyz="0.48615 3E-05 0.03967"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -556,7 +556,7 @@
       </camera>
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <ros>
-          <namespace>/camera/camera</namespace>
+          <namespace>/camera</namespace>
           <remapping>image_raw:=color/image_raw</remapping>
           <remapping>depth/image_raw:=depth/image_rect_raw</remapping>
         </ros>
