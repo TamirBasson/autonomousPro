@@ -40,7 +40,13 @@ def generate_launch_description():
     declare_use_small_house = DeclareLaunchArgument(
         name="use_small_house",
         default_value="true",
-        description="Use small house world (true) or warehouse world (false)"
+        description="Use small house world (true) or other worlds (false)"
+    )
+
+    declare_use_hospital = DeclareLaunchArgument(
+        name="use_hospital",
+        default_value="false",
+        description="Use hospital world (true) or other worlds (false)"
     )
 
     # Robot State Publisher
@@ -83,6 +89,27 @@ def generate_launch_description():
             "gui": "true"
         }.items(),
         condition=IfCondition(LaunchConfiguration("use_small_house"))
+    )
+
+    # Gazebo Launch - Hospital World (Optimized)
+    gazebo_hospital_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare("aws_robomaker_hospital_world"), "launch", "hospital.launch.py"
+            ])
+        ]),
+        launch_arguments={
+            "world": PathJoinSubstitution([
+                FindPackageShare("aws_robomaker_hospital_world"), "worlds", "hospital_two_floors.world"
+            ]),
+            "gui": "true",
+            "verbose": "true",
+            "physics": "ode",
+            "paused": "false",
+            "use_sim_time": "true",
+            "extra_gazebo_args": "--verbose"
+        }.items(),
+        condition=IfCondition(LaunchConfiguration("use_hospital"))
     )
 
     # Joint State Publisher
@@ -147,9 +174,11 @@ def generate_launch_description():
         declare_rviz_config_path,
         declare_use_warehouse,
         declare_use_small_house,
+        declare_use_hospital,
         robot_state_publisher,
         gazebo_warehouse_launch,
         gazebo_small_house_launch,
+        gazebo_hospital_launch,
         joint_state_publisher,
         spawn_robot_entity,
         spawn_diff_controller,
