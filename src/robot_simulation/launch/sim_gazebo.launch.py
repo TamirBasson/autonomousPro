@@ -2,6 +2,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
+from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
@@ -30,6 +31,18 @@ def generate_launch_description():
         description="Path to the RViz configuration file"
     )
 
+    declare_use_warehouse = DeclareLaunchArgument(
+        name="use_warehouse",
+        default_value="false",
+        description="Use warehouse world (true) or small house world (false)"
+    )
+
+    declare_use_small_house = DeclareLaunchArgument(
+        name="use_small_house",
+        default_value="true",
+        description="Use small house world (true) or warehouse world (false)"
+    )
+
     # Robot State Publisher
     robot_state_publisher = Node(
         package="robot_state_publisher",
@@ -41,8 +54,8 @@ def generate_launch_description():
         }]
     )
 
-    # Gazebo Launch
-    gazebo_launch = IncludeLaunchDescription(
+    # Gazebo Launch - Warehouse World
+    gazebo_warehouse_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             PathJoinSubstitution([
                 FindPackageShare("aws_robomaker_small_warehouse_world"), "launch", "no_roof_small_warehouse.launch.py"
@@ -52,7 +65,24 @@ def generate_launch_description():
             "world_name": PathJoinSubstitution([
                 FindPackageShare("aws_robomaker_small_warehouse_world"), "worlds", "no_roof_small_warehouse.world"
             ])
-        }.items()
+        }.items(),
+        condition=IfCondition(LaunchConfiguration("use_warehouse"))
+    )
+
+    # Gazebo Launch - Small House World
+    gazebo_small_house_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare("aws_robomaker_small_house_world"), "launch", "small_house.launch.py"
+            ])
+        ]),
+        launch_arguments={
+            "world": PathJoinSubstitution([
+                FindPackageShare("aws_robomaker_small_house_world"), "worlds", "small_house.world"
+            ]),
+            "gui": "true"
+        }.items(),
+        condition=IfCondition(LaunchConfiguration("use_small_house"))
     )
 
     # Joint State Publisher
@@ -115,8 +145,11 @@ def generate_launch_description():
     return LaunchDescription([
         declare_urdf_path,
         declare_rviz_config_path,
+        declare_use_warehouse,
+        declare_use_small_house,
         robot_state_publisher,
-        gazebo_launch,
+        gazebo_warehouse_launch,
+        gazebo_small_house_launch,
         joint_state_publisher,
         spawn_robot_entity,
         spawn_diff_controller,
