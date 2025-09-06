@@ -38,7 +38,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/base_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/base_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -48,7 +48,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/base_link.stl" scale="1 1 1"/>
+        <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/base_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -75,7 +75,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-      <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_hinge.stl" scale="1 1 1"/>
+      <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/front_hinge.stl" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -85,7 +85,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-      <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_hinge.stl" scale="1 1 1"/>
+      <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/front_hinge.stl" scale="1 1 1"/>
 
       </geometry>
     </collision>
@@ -134,7 +134,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_wheel_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/front_wheel_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -144,7 +144,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-         <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/front_wheel_link.stl" scale="1 1 1"/>
+         <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/front_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
 
@@ -186,7 +186,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-      <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/left_wheel_link.stl" scale="1 1 1"/>
+      <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/left_wheel_link.stl" scale="1 1 1"/>
 
       </geometry>
       <material name="black"/>
@@ -197,7 +197,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/left_wheel_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/left_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -242,7 +242,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_hinge.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/rear_hinge.stl" scale="1 1 1"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -251,7 +251,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_hinge.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/rear_hinge.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -299,7 +299,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_wheel_link.stl" scale="1 1 1"/>
+        <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/rear_wheel_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -309,7 +309,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-         <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/rear_wheel_link.stl" scale="1 1 1"/>
+         <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/rear_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -350,7 +350,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/right_wheel_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/right_wheel_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="black"/>
     </visual>
@@ -360,7 +360,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/right_wheel_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/right_wheel_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -405,7 +405,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/camera_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/camera_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="yellow"/>
     </visual>
@@ -414,7 +414,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/camera_link.stl" scale="1 1 1"/>
+        <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/camera_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
@@ -454,7 +454,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/lidar_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/lidar_link.stl" scale="1 1 1"/>
       </geometry>
       <material name="cyan"/>
     </visual>
@@ -463,7 +463,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-          <mesh filename="file:///home/tamir/autonomousPro/src/robot_description/meshes/lidar_link.stl" scale="1 1 1"/>
+          <mesh filename="file:///home/tamir/thesis/autonomousPro/src/robot_description/meshes/lidar_link.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>
